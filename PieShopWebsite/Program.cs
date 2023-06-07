@@ -1,5 +1,15 @@
 // load the appsetting.json file and kestrel server
+using BethanysPieShop.Models;
+using PieShopWebsite.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// AddScopes: singloten per request
+// register service
+// dependency injection
+// builder.Services.AddScoped<IMyDependency, MyDependency>();
+builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>();
+builder.Services.AddScoped<IPieRepository, MockPieRepository>();
 
 // make sure the app knows MVC, enable MVC
 builder.Services.AddControllersWithViews();
