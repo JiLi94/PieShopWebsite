@@ -23,8 +23,16 @@ namespace PieShopWebsite.Controllers
             //ViewBag.CurrentCategory = "Cheese Cakes";
             // pass the collection of pies from model to the view
             //return View(_pieRepository.AllPies);
-            PieListViewModel pieListViewModel = new PieListViewModel(_pieRepository.AllPies, "Cheese Cakes");
+            PieListViewModel pieListViewModel = new PieListViewModel(_pieRepository.AllPies, "All Pies");
             return View(pieListViewModel);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var pie = _pieRepository.GetPieById(id);
+            if (pie == null)
+                return NotFound();
+            return View(pie);
         }
     }
 }

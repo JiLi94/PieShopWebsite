@@ -29,7 +29,9 @@ if (app.Environment.IsDevelopment()) {
     app.UseDeveloperExceptionPage();
 }
 
-// endpoint middleware
+// endpoint middleware, {controller=home}/{action=Index}/{id?}
 app.MapDefaultControllerRoute();
+
+//seed database
 DbInitializer.Seed(app);
 app.Run();
