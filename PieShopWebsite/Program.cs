@@ -17,7 +17,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<PieShopDbContext>(options =>
 {
     options.UseSqlServer(
-        builder.Configuration["ConnectionStrings:PieShioDbContextConnection"]);
+        builder.Configuration["ConnectionStrings:PieShopDbContextConnection"]);
 });
 
 var app = builder.Build();
@@ -31,5 +31,5 @@ if (app.Environment.IsDevelopment()) {
 
 // endpoint middleware
 app.MapDefaultControllerRoute();
-
+DbInitializer.Seed(app);
 app.Run();
