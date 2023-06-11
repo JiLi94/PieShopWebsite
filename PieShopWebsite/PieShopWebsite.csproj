@@ -21,6 +21,8 @@
     <None Remove="Views\Shared\Components\" />
     <None Remove="Views\Shared\Components\ShoppingCartSummary\" />
     <None Remove="Views\Shared\Components\CategoryMenu\" />
+    <None Remove="Views\Contact\" />
+    <None Remove="TagHelper\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
@@ -29,5 +31,7 @@
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="Views\Shared\Components\ShoppingCartSummary\" />
     <Folder Include="Views\Shared\Components\CategoryMenu\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="TagHelpers\" />
   </ItemGroup>
 </Project>
