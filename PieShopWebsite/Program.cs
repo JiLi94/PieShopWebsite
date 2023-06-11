@@ -1,5 +1,6 @@
 // load the appsetting.json file and kestrel server
 using BethanysPieShop.Models;
+using Microsoft.EntityFrameworkCore;
 using PieShopWebsite.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,11 @@ builder.Services.AddScoped<IPieRepository, MockPieRepository>();
 
 // make sure the app knows MVC, enable MVC
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<PieShopDbContext>(options =>
+{
+    options.UseSqlServer(
+        builder.Configuration["ConnectionStrings:PieShioDbContextConnection"]);
+});
 
 var app = builder.Build();
 
