@@ -9,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 // register service
 // dependency injection
 // builder.Services.AddScoped<IMyDependency, MyDependency>();
-builder.Services.AddScoped<ICategoryRepository, MockCategoryRepository>();
-builder.Services.AddScoped<IPieRepository, MockPieRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IPieRepository, PieRepository>();
 
 // make sure the app knows MVC, enable MVC
 builder.Services.AddControllersWithViews();
