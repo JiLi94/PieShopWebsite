@@ -17,9 +17,15 @@
   <ItemGroup>
     <None Remove="Views\Home\" />
     <None Remove="Views\ShoppingCart\" />
+    <None Remove="Components\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\ShoppingCartSummary\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
     <Folder Include="Views\ShoppingCart\" />
+    <Folder Include="Components\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\ShoppingCartSummary\" />
   </ItemGroup>
 </Project>
