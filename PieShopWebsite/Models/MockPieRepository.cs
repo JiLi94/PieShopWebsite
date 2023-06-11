@@ -1,6 +1,6 @@
 ﻿using PieShopWebsite.Models;
 
-namespace BethanysPieShop.Models
+namespace PieShopWebsite.Models
 {
     public class MockPieRepository : IPieRepository
     {

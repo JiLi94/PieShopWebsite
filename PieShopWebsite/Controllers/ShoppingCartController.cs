@@ -2,7 +2,7 @@
 using PieShopWebsite.Models;
 using PieShopWebsite.ViewModels;
 
-namespace BethanysPieShop.Controllers
+namespace PieShopWebsite.Controllers
 {
     public class ShoppingCartController : Controller
     {
