@@ -12,6 +12,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IPieRepository, PieRepository>();
 
+//creates an instance of the ShoppingCart class, passing in the sp parameter. This factory method is invoked by the dependency injection container when resolving instances of the IShoppingCart interface.
+builder.Services.AddScoped<IShoppingCart, ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+builder.Services.AddSession();
+builder.Services.AddHttpContextAccessor();
 // make sure the app knows MVC, enable MVC
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<PieShopDbContext>(options =>
@@ -24,6 +28,7 @@ var app = builder.Build();
 
 // Middlewares
 app.UseStaticFiles();
+app.UseSession();
 
 if (app.Environment.IsDevelopment()) {
     app.UseDeveloperExceptionPage();
