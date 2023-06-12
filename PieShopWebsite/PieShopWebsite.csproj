@@ -23,6 +23,7 @@
     <None Remove="Views\Shared\Components\CategoryMenu\" />
     <None Remove="Views\Contact\" />
     <None Remove="TagHelper\" />
+    <None Remove="Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
@@ -33,5 +34,6 @@
     <Folder Include="Views\Shared\Components\CategoryMenu\" />
     <Folder Include="Views\Contact\" />
     <Folder Include="TagHelpers\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
 </Project>

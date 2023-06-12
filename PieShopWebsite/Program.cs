@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // builder.Services.AddScoped<IMyDependency, MyDependency>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IPieRepository, PieRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 //creates an instance of the ShoppingCart class, passing in the sp parameter. This factory method is invoked by the dependency injection container when resolving instances of the IShoppingCart interface.
 builder.Services.AddScoped<IShoppingCart, ShoppingCart>(sp => ShoppingCart.GetCart(sp));
