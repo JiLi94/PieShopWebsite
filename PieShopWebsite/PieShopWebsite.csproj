@@ -24,6 +24,8 @@
     <None Remove="Views\Contact\" />
     <None Remove="TagHelper\" />
     <None Remove="Views\Order\" />
+    <None Remove="Pages\" />
+    <None Remove="Pages\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Home\" />
@@ -35,5 +37,7 @@
     <Folder Include="Views\Contact\" />
     <Folder Include="TagHelpers\" />
     <Folder Include="Views\Order\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Pages\Shared\" />
   </ItemGroup>
 </Project>

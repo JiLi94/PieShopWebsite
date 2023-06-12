@@ -1,5 +1,4 @@
 ﻿using System;
-using BethanysPieShop.Models;
 using Microsoft.AspNetCore.Mvc;
 using PieShopWebsite.Models;
 using PieShopWebsite.ViewModels;

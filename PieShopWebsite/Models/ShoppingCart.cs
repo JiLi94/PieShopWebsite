@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PieShopWebsite.Models;
 
-namespace BethanysPieShop.Models
+namespace PieShopWebsite.Models
 {
     public class ShoppingCart : IShoppingCart
     {
