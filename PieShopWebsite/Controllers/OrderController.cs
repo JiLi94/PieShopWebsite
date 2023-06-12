@@ -15,11 +15,12 @@ namespace PieShopWebsite.Controllers
             _shoppingCart = shoppingCart;
         }
 
-        public IActionResult Checkout()
+        public IActionResult Checkout() //GET by default
         {
             return View();
         }
 
+        // post
         [HttpPost]
         public IActionResult Checkout(Order order)
         {
